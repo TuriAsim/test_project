@@ -1,0 +1,9 @@
+transformers
+accelerate
+langchain
+scikit-learn
+langchain_community
+pandas
+torch
+numpy
+huggingface_hub
