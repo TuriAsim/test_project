@@ -12,10 +12,13 @@ from langchain.chains import LLMChain
 from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_score
 from huggingface_hub import login
 from transformers import AutoModelForCausalLM, AutoTokenizer
+from dotenv import load_dotenv
 
 def main():
+    # Load environment variables from .env file
+    load_dotenv()
     # Load token from environment variable
-    token = os.environ.get("HUGGINGFACE_TOKEN")
+    token = os.getenv("HUGGINGFACE_API_KEY")
 
     if not token:
         raise ValueError("Hugging Face token not found in environment variables!")
