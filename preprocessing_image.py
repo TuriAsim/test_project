@@ -26,7 +26,7 @@ def main():
     df = pd.read_csv('datasets/augmented_tenders.csv')
 
     # Initialize Ollama LLM
-    model_name = "mistralai/Mistral-7B-Instruct-v0.3"  # Example model identifier
+    model_name = "deepseek-ai/DeepSeek-R1"  # Example model identifier
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_auth_token=True)
     model = AutoModelForCausalLM.from_pretrained(
         model_name, 
